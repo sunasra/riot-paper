@@ -10,13 +10,16 @@ module.exports = function(grunt) {
         pkg: grunt.file.readJSON("package.json"),
         clean: {
             pre_build: "css/*",
-            post_build:"css/compiledscss.scss"
+            post_build: "css/compiledscss.scss"
         },
-
         concat: {
             concat_js: {
                 src: css_files,
-                dest: "css/compiledscss.scss",
+                dest: "lib/css/compiledscss.scss",
+            },
+            concat_tags: {
+                src: components,
+                dest: "lib/components/riot-paper.tag",
             }
         },
         sass: {
@@ -29,6 +32,15 @@ module.exports = function(grunt) {
                     "css/riot-paper.css": "css/compiledscss.scss"
                 }
             }
+        },
+        riot: {
+            options: {
+                compact: true
+            },
+            tags: {
+                src: "lib/components/riot-paper.tag",
+                dest: "lib/components/riot-paper.js"
+            },
         }
     });
 
@@ -42,5 +54,5 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks("grunt-sass");
 
     //Task for building the static contents of the application
-    grunt.registerTask("default", ["clean:pre_build", "concat", "sass","clean:post_build"]);
+    grunt.registerTask("default", ["clean:pre_build", "concat", "sass", "clean:post_build"]);
 };
