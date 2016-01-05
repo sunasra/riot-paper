@@ -1,9 +1,0 @@
-{
-	"version": 3,
-	"file": "riot-paper.css",
-	"sources": [
-		"compiledscss.scss"
-	],
-	"mappings": "AAAA,EAAE,CAAA;EACD,OAAO,EAAE,GAAI,GACb",
-	"names": []
-}

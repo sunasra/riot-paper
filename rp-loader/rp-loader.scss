@@ -1,8 +1,9 @@
+
 rp-loader{
   @extend .inline-block;
 }
 
-.loader-circular {               
+.loader-circular {
   -webkit-animation: loader-rotate 2s linear infinite;
   animation: loader-rotate 2s linear infinite;
 
