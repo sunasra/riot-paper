@@ -1,3 +1,14 @@
+h4 {
+  margin: 0px; }
+
+body {
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  color: #616161; }
+
+.hr {
+  background-color: #EEEEEE;
+  height: 1px; }
+
 .block {
   display: block; }
 
@@ -13,7 +24,7 @@ button {
   min-width: 64px;
   padding: 0 16px;
   display: inline-block;
-  font-family: "Roboto","Helvetica","Arial",sans-serif;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
   /* font-size: 14px; */
   font-weight: 500;
   text-transform: uppercase;
@@ -42,6 +53,26 @@ rp-fab button {
   box-shadow: 0 1px 1.5px 0 rgba(0, 0, 0, 0.12), 0 1px 1px 0 rgba(0, 0, 0, 0.24);
   position: relative;
   line-height: normal; }
+
+.simple-card-container {
+  box-shadow: 0 0 2px #ddd;
+  border-radius: 2px; }
+  .simple-card-container h4 {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    padding: 10px; }
+  .simple-card-container .main-content img {
+    width: 100%; }
+  .simple-card-container .caption-cotainer {
+    padding: 10px;
+    padding-top: 20px;
+    padding-bottom: 20px; }
+  .simple-card-container .action-container {
+    padding: 10px;
+    color: #FFCC80; }
+    .simple-card-container .action-container .primary-action {
+      float: left;
+      width: 30%; }
 
 .loader-circular {
   -webkit-animation: loader-rotate 2s linear infinite;

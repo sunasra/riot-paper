@@ -1,3 +1,17 @@
+$fonts:"Roboto","Helvetica","Arial",sans-serif;
+// reset
+h4{
+	margin:0px;
+}
+body{
+	font-family: $fonts;
+	color:#616161;
+}
+.hr{
+	background-color:#EEEEEE;
+	height: 1px;
+}
+
 .block{
 	display: block;
 }
@@ -6,7 +20,7 @@
 	display: inline-block;
 }
 
-button{	
+button{
   border: none;
   border-radius: 2px;
   color: #000;
@@ -15,7 +29,7 @@ button{
   min-width: 64px;
   padding: 0 16px;
   display: inline-block;
-  font-family: "Roboto","Helvetica","Arial",sans-serif;
+  font-family: $fonts;
   /* font-size: 14px; */
   font-weight: 500;
   text-transform: uppercase;

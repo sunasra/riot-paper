@@ -3,10 +3,18 @@
   <button style="color:{opts.color||'#ffffff'};background-color:{opts.bgcolor||'#3f51b5'}"><i class="material-icons">{opts.icon}</i></button>
 </rp-fab>
 
-<rp-simple-text-card>
-  <div>Hello</div>
-  <div>asdkhj</div>
-</rp-simple-text-card>
+<rp-simple-card>
+  <div class="simple-card-container">
+    <h4>News</h4>
+    <div class="main-content"><img src="https://static.pexels.com/photos/24840/pexels-photo-large.jpg"/></div>
+    <div class="caption-cotainer">This is caption content</div>
+    <div class="hr"></div>
+    <div class="action-container">
+      <div class="primary-action">Action 1</div>
+      <div class="secondary-action">Action 2</div>
+    </div>
+  <div>
+</rp-simple-card>
 
 <rp-loader>
     <svg class="loader-circular" height="50" width="50">
