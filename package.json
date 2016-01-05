@@ -1,0 +1,29 @@
+{
+  "name": "riot-paper",
+  "version": "0.0.1",
+  "author": "Manzur Husain <sunasra@gmail.com>,Prateek Bhatnagar <prateek89born@gmail.com>",
+  "private": false,
+  "scripts": {
+    "build": "grunt build",
+    "all": "grunt"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sunasra/riot-paper"
+  },
+  "dependencies": {
+    "riot": "2.3.12"
+  },
+  "devDependencies": {
+    "grunt": "~0.4.0",
+    "grunt-cli": "^0.1.13",
+    "grunt-contrib-clean": "^0.7.0",
+    "grunt-contrib-concat": "^0.5.1",
+    "grunt-contrib-copy": "^0.8.2",
+    "grunt-contrib-uglify": "^0.9.1",
+    "grunt-sass": "^1.1.0",
+    "load-grunt-tasks": "^3.1.0"
+  },
+  "license": "MIT",
+  "files": []
+}
