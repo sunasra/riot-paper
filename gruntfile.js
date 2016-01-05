@@ -1,19 +1,18 @@
 var css_files = [
 	"scss/common.scss",
-	"rp-loader/rp-loader.scss",
+	"rp-*/*.scss"
 ];
 
 var components = [
-    "rp-loader/rp-loader.html",
-		"rp-button/rp-fab.html"
+    "rp-*/*.html"		
 ];
 module.exports = function(grunt) {
 	// Project configuration.
 	grunt.initConfig({
 	    pkg: grunt.file.readJSON("package.json"),
 	    clean: {
-	        pre_build: "css/*",
-	        post_build: "css/compiledscss.scss"
+	        pre_build: "lib/css/*",
+	        post_build: "lib/css/compiledscss.scss"
 	    },
 	    concat: {
 	        concat_js: {
@@ -32,7 +31,7 @@ module.exports = function(grunt) {
 	        },
 	        dist: {
 	            files: {
-	                "css/riot-paper.css": "css/compiledscss.scss"
+	                "lib/css/riot-paper.css": "lib/css/compiledscss.scss"
 	            }
 	        }
 	    },
