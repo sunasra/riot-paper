@@ -1,17 +1,17 @@
 <html>
   <head>
     <title>Hello Riot.</title>
+    <link rel="stylesheet" type="text/css" href="/lib/css/riot-paper.css">
   </head>
   <body>
-    <!-- place the custom tag anywhere inside the body -->
-    <!-- <rp-simple-text-card></rp-simple-text-card> -->
-    <rp-fab></rp-fab>
-    <!-- include the tag -->
-    <script type="riot/tag" src="rp-cards/rp-simple-text-card.html"></script>
-    <script type="riot/tag" src="rp-button/rp-fab.html"></script>
+    <h1>Controls demo</h1>
+    <h2>Loader</h2>
+    <rp-loader></rp-loader>
     <!-- include riot.js -->
-    <script src="https://cdn.rawgit.com/riot/riot/master/riot+compiler.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/riot/2.3.12/riot.js"></script>
+    <!-- include the tag -->
+    <script src="lib/components/riot-paper.js"></script>
     <!-- mount the tag -->
-    <script>riot.mount('*')</script>    
+    <script>riot.mount('*',{})</script>    
   </body>
 </html>
