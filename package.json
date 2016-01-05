@@ -22,6 +22,7 @@
     "grunt-contrib-copy": "^0.8.2",
     "grunt-contrib-uglify": "^0.9.1",
     "grunt-contrib-watch": "^0.6.1",
+    "grunt-riot": "^0.1.4",
     "grunt-sass": "^1.1.0",
     "load-grunt-tasks": "^3.1.0"
   },
