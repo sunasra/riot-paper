@@ -27,11 +27,8 @@
         });
 
         function sendTap(elm, data) {
-
             if (lastEventSent === 0 || (Date.now() - lastEventSent > 500)) {
                 lastEventSent = Date.now();
-                // addEventListener
-
                 //inline element
                 if (elm["ontap"]) {
                     //var ev = document.createEvent("CustomEvent");

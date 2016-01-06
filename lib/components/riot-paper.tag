@@ -1,9 +1,19 @@
 <!-- pass icon using https://design.google.com/icons/ -->
 <rp-fab>
-  <button class="button" style="color:{opts.color||'#ffffff'};background-color:{opts.bgcolor||'#3f51b5'}">
+  <button class="button" style="color:{opts.color||'#ffffff'};background-color:{opts.bgcolor||'#3f51b5'}" ontap="{sendTap}">
       <i class="material-icons">{opts.icon}</i>
       <rp-ripple></rp-ripple>
   </button>
+  <script>
+    sendTap(){
+      if(this.root["ontap"]){
+        this.root["ontap"]();
+      }
+      else if(this.root.getAttribute("ontap")){
+        window[this.root.getAttribute("ontap")]();
+      }
+    }
+  </script>
 </rp-fab>
 
 <rp-simple-card>
@@ -46,11 +56,8 @@
         });
 
         function sendTap(elm, data) {
-
             if (lastEventSent === 0 || (Date.now() - lastEventSent > 500)) {
                 lastEventSent = Date.now();
-                // addEventListener
-
                 //inline element
                 if (elm["ontap"]) {
                     //var ev = document.createEvent("CustomEvent");

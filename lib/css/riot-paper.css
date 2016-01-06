@@ -9,7 +9,7 @@ body {
 .pos-relative, rp-fab .button {
   position: relative; }
 
-.pos-absolute, rp-fab, rp-ripple .dot {
+.pos-absolute, rp-ripple .dot {
   position: absolute; }
 
 /* Helpers ===========================*/
