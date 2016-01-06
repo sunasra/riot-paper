@@ -1,35 +1,9 @@
-
-.simple-card-container{
-  box-shadow: 0 0 2px #ddd;
-  border-radius: 2px;
-
-  h4{
-    margin-top: 5px;
-    margin-bottom: 5px;
-    padding: 10px;
+rp-simple-card{
+  @extend .block;
+  @extend .border;
+  @extend .shadow;
+  @extend .round-border;
+  &.square{
+  	border-radius: 0px;
   }
-
-  .main-content{
-    img{
-      width:100%;
-    }
-  }
-
-  .caption-cotainer{
-     padding: 10px;
-     padding-top:20px;
-     padding-bottom:20px;
-   }
-
-   .action-container{
-     padding: 10px;
-     color:#FFCC80;
-     .primary-action{
-        float:left;
-        width: 30%;
-     }
-     .secondary-action{
-
-     }
-   }
 }
