@@ -1,16 +1,7 @@
-<!-- pass icon using https://design.google.com/icons/ -->
-riot.tag('rp-fab', '<button class="button" riot-style="color:{opts.color||\'#ffffff\'};background-color:{opts.bgcolor||\'#3f51b5\'}"><i class="material-icons">{opts.icon}</i><rp-ripple></rp-ripple></button>', function(opts) {
-
-});
-
-riot.tag('rp-simple-card', '<div class="card-body"><yield></yield></div>', function(opts) {
-
-});
-
-riot.tag('rp-loader', '<svg class="loader-circular" height="50" width="50"><circle class="loader-path" cx="25" cy="25.2" r="19.9" fill="none" stroke-width="{opts.strokewidth||3}" stroke-miterlimit="10"></circle></svg>', function(opts) {
-
-});
-riot.tag('rp-ripple', '<div class="dot {rippleClass}" riot-style="left:{rippleX}px;top:{rippleY}px;"></div>', function(opts) {
+<rp-ripple>
+    <div class="dot {rippleClass}" style="left:{rippleX}px;top:{rippleY}px;">
+    </div>
+    <script>
     var _self = this;
     var lastEventSent = 0;
     _self.rippleClass = "none";
@@ -39,11 +30,12 @@ riot.tag('rp-ripple', '<div class="dot {rippleClass}" riot-style="left:{rippleX}
 
             if (lastEventSent === 0 || (Date.now() - lastEventSent > 500)) {
                 lastEventSent = Date.now();
+                // addEventListener
 
-
+                //inline element
                 if (elm["ontap"]) {
-
-
+                    //var ev = document.createEvent("CustomEvent");
+                    //ev.initEvent("tap");
                     setTimeout(function() {
                         data.targetElement = elm;
                         elm["ontap"](data);
@@ -60,5 +52,5 @@ riot.tag('rp-ripple', '<div class="dot {rippleClass}" riot-style="left:{rippleX}
             
         }
     })
-    
-});
+    </script>
+</rp-ripple>

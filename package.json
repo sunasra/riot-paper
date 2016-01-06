@@ -12,6 +12,7 @@
     "url": "https://github.com/sunasra/riot-paper"
   },
   "dependencies": {
+    "compass-mixins": "^0.12.7",
     "riot": "2.3.12"
   },
   "devDependencies": {

@@ -1,0 +1,23 @@
+rp-ripple {
+    .dot {
+        @extend .pos-absolute;
+        @extend .transZ;
+        @include transition-duration(500ms);
+        @include transition-timing-function(ease-out);
+        @include transition-property(transform opacity);
+        background-color: $rippleColor;
+        background-blend-mode: multiply;
+        opacity: 0.8;
+        top: 0px;
+        left: 0px;
+        width: 0px;
+        height: 0px;
+        border-radius: 50%;
+        &.ripple {
+            width: 10px;
+            height: 10px;
+            opacity: 0.5;
+            @include transform(scale(100));
+        }
+    }
+}
