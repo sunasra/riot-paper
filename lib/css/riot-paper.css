@@ -6,7 +6,7 @@ body {
   color: #616161; }
 
 /* Positions ===========================*/
-.pos-relative, rp-fab .button {
+.pos-relative, rp-fab .button, rp-tab .each-tab {
   position: relative; }
 
 .pos-absolute, rp-ripple .dot {
@@ -16,21 +16,30 @@ body {
 .p {
   padding: 8px; }
 
+.p16, rp-tab .each-tab {
+  padding: 16px; }
+
 .m {
   margin: 8px; }
 
 .block, rp-simple-card {
   display: block; }
 
-.inline-block, rp-fab .button, rp-loader {
+.inline-block, rp-fab .button, rp-loader, rp-tab .each-tab, rp-tab .each-tab .tab-text {
   display: inline-block; }
+
+.flex, rp-tab {
+  display: flex; }
 
 .shadow, rp-simple-card {
   -webkit-box-shadow: 0 0 2px #DDDDDD;
   -moz-box-shadow: 0 0 2px #DDDDDD;
   box-shadow: 0 0 2px #DDDDDD; }
 
-.overflow-hidden, rp-fab .button {
+.full-width, rp-tab .each-tab .tab-text {
+  width: 100%; }
+
+.overflow-hidden, rp-fab .button, rp-tab .each-tab, rp-tab .each-tab .tab-text {
   overflow: hidden; }
 
 .circle, rp-fab .button {
@@ -48,6 +57,9 @@ body {
   -ms-transform: translateZ(0);
   -o-transform: translateZ(0);
   transform: translateZ(0); }
+
+.text-center, rp-tab .each-tab {
+  text-align: center; }
 
 rp-fab .button {
   border: 0px;
@@ -175,5 +187,20 @@ rp-ripple .dot {
     -ms-transform: scale(100);
     -o-transform: scale(100);
     transform: scale(100); }
+
+rp-tab {
+  width: 100%; }
+  rp-tab .each-tab {
+    flex: 1;
+    background: #070731;
+    border-radius: 0;
+    color: #ffffff;
+    cursor: pointer; }
+    rp-tab .each-tab .tab-text {
+      text-overflow: ellipsis;
+      text-transform: uppercase;
+      font-weight: 200; }
+    rp-tab .each-tab:hover {
+      background: #30306B; }
 
 /*# sourceMappingURL=riot-paper.css.map */

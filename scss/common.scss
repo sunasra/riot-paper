@@ -38,6 +38,10 @@ body {
     padding: 8px;
 }
 
+.p16{
+  padding: 16px;
+}
+
 .m {
     margin: 8px;
 }
@@ -50,8 +54,16 @@ body {
     display: inline-block;
 }
 
+.flex{
+  display: flex;
+}
+
 .shadow {
     @include box-shadow(0 0 2px $grey);
+}
+
+.full-width{
+  width: 100%;
 }
 
 .overflow-hidden{
@@ -72,4 +84,8 @@ body {
 
 .transZ {
     @include transform(translateZ(0));
+}
+
+.text-center{
+  text-align: center;
 }

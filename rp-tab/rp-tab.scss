@@ -1,0 +1,28 @@
+rp-tab {
+    @extend .flex;
+    width: 100%;
+      .each-tab{
+        @extend .pos-relative;
+        @extend .overflow-hidden;
+        @extend .inline-block;
+        @extend .p16;
+        @extend .text-center;
+        flex:1;
+        background: #070731;
+        border-radius: 0;
+        color:#ffffff;
+        cursor: pointer;
+        .tab-text{
+          @extend .inline-block;
+          @extend .overflow-hidden;
+          @extend .full-width;
+          text-overflow: ellipsis;
+          text-transform:uppercase;
+          font-weight: 200;
+        }
+
+        &:hover{
+          background:#30306B;
+        }
+    }
+}

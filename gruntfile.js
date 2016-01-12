@@ -4,7 +4,7 @@ var css_files = [
 ];
 
 var components = [
-    "rp-*/*.html"		
+    "rp-*/*.html"
 ];
 module.exports = function(grunt) {
 	// Project configuration.

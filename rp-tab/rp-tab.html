@@ -1,0 +1,29 @@
+<rp-tab>
+  <!-- <div class="" each={opts.tabs}>
+  <h1>{title}</h1>
+</div> -->
+    <a each={tab,index in tabs} data-tabindex="{index}" class="each-tab" onclick="{sendTap}">
+      <span class="tab-text">{tab}</span>
+      <rp-ripple></rp-ripple>
+    </a>
+    <script>
+      this.tabs=[];
+      this.on("mount",function(){
+        if(opts.tabs){
+          this.update({tabs:opts.tabs.split(",")});
+        }
+      });
+      sendTap(e){
+        var $target=e.target;
+        if($target.classList.contains("tab-text")){
+          $target=$target.parentNode;
+        }
+        if(this.root["ontap"]){
+          this.root["ontap"](e.target.getAttribute("data-tabindex")||0);
+        }
+        else if(this.root.getAttribute("ontap")){
+          window[this.root.getAttribute("ontap")](e.target.getAttribute("data-tabindex")||0);
+        }
+      }
+    </script>
+</rp-tab>

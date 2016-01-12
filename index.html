@@ -8,7 +8,7 @@
   <body>
     <h1>Controls demo</h1>
     <h2>Loader</h2>
-    <rp-loader></rp-loader> 
+    <rp-loader></rp-loader>
     <h2>Fabbutton</h2>
     <rp-fab color="#ffffff" bgcolor="#3f51b5" icon="add">
     </rp-fab>
@@ -17,6 +17,9 @@
       <h4>hi</h4>
     </rp-simple-card>
 
+    <h2>Tabs</h2>
+    <rp-tab tabs="One,Two,Three" ontap="selectTab"></rp-tab>
+
     <!-- include riot.js -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/riot/2.3.12/riot.js"></script>
     <!-- include the tag -->
@@ -24,6 +27,8 @@
     <!-- mount the tag -->
     <script>
       riot.mount('*',{});
+
+      function selectTab(e){console.log('chosen tab:'+e)}
     </script>
   </body>
 </html>
